@@ -1,0 +1,25 @@
+//Get a list of name as an input from the user and make the first letters in caps and print each word as a list
+
+import mysql.connector
+
+mydb = mysql.connector.connect(
+
+  host="localhost",
+
+  user="demo",
+
+  password="worldsbestpassword",
+
+  database="mydb"
+
+)
+
+mycursor = mydb.cursor()
+
+s = "INSERT INTO demo (demoname, demoaddress) VALUES (%s, %s)"
+
+v = ("Minions", "Minion_City")
+
+mycursor.execute(s, v)
+
+mydb.commit()
