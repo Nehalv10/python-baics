@@ -1,0 +1,33 @@
+//Write a code to print a Fibonacci series upto the nth term. Use the int(input()) to get an input from the user as well for the value of n.)
+
+def fib(n):
+
+    if n<=0:
+
+        print("Enter positive number")
+
+    if n==1:
+
+        print("0")
+
+    else:
+
+        a,b=0,1
+
+        x=0
+
+        count=0
+
+        while(count<n):
+
+            print(a,end=" ")
+
+            x=a+b
+
+            a,b=b,x
+
+            count+=1
+
+n=int(input())
+
+fib(n)
